@@ -1,56 +1,84 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Huerto medicinal AR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huerto medicinal AR</title>
 
-<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; }
+    #hint {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      background: rgba(0,0,0,.65);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      z-index: 9999;
+      text-align: center;
+    }
+  </style>
 </head>
 
-<body style="margin:0">
+<body>
+  <a-scene
+    mindar-image="imageTargetSrc: targets.mind; autoStart: true;"
+    vr-mode-ui="enabled:false"
+    device-orientation-permission-ui="enabled:false"
+    renderer="colorManagement: true"
+  >
+    <a-assets>
+      <img id="p01" src="p01.png">
+      <img id="p02" src="p02.png">
+      <img id="p03" src="p03.png">
+      <img id="p04" src="p04.png">
+      <img id="p05" src="p05.png">
+      <img id="p06" src="p06.png">
+      <img id="p07" src="p07.png">
+      <img id="p08" src="p08.png">
+      <img id="p09" src="p09.png">
+      <img id="p10" src="p10.png">
+      <img id="p11" src="p11.png">
+      <img id="p12" src="p12.png">
+      <img id="p13" src="p13.png">
+      <img id="p14" src="p14.png">
+    </a-assets>
 
-<a-scene
-mindar-image="imageTargetSrc: targets.mind; autoStart: true;"
-vr-mode-ui="enabled:false"
-device-orientation-permission-ui="enabled:false">
+    <a-camera position="0 0 0" look-controls="enabled:false"></a-camera>
 
-<a-assets>
-<img id="p01" src="p01.png">
-<img id="p02" src="p02.png">
-<img id="p03" src="p03.png">
-<img id="p04" src="p04.png">
-<img id="p05" src="p05.png">
-<img id="p06" src="p06.png">
-<img id="p07" src="p07.png">
-<img id="p08" src="p08.png">
-<img id="p09" src="p09.png">
-<img id="p10" src="p10.png">
-<img id="p10" src="p11.png">
-<img id="p10" src="p12.png">
-<img id="p10" src="p13.png">
-<img id="p10" src="p14.png">  
+    <a-entity mindar-image-target="targetIndex: 0">
+      <a-plane src="#p01" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0"
+        material="shader: flat; transparent: true"
+        animation__smoothPos="property: position; dur: 500; easing: easeOutQuad"
+        animation__smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane>
+    </a-entity>
 
-</a-assets>
+    <a-entity mindar-image-target="targetIndex: 1">
+      <a-plane src="#p02" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0"
+        material="shader: flat; transparent: true"
+        animation__smoothPos="property: position; dur: 500; easing: easeOutQuad"
+        animation__smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane>
+    </a-entity>
 
-<a-camera look-controls="enabled:false"></a-camera>
+    <a-entity mindar-image-target="targetIndex: 2">
+      <a-plane src="#p03" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0"
+        material="shader: flat; transparent: true"
+        animation__smoothPos="property: position; dur: 500; easing: easeOutQuad"
+        animation__smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane>
+    </a-entity>
 
-<a-entity mindar-image-target="targetIndex: 0"><a-plane src="#p01" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 1"><a-plane src="#p02" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 2"><a-plane src="#p03" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 3"><a-plane src="#p04" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 4"><a-plane src="#p05" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 5"><a-plane src="#p06" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 6"><a-plane src="#p07" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 7"><a-plane src="#p08" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 8"><a-plane src="#p09" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 9"><a-plane src="#p10" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 10"><a-plane src="#p11" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 11"><a-plane src="#p12" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 12"><a-plane src="#p13" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
-<a-entity mindar-image-target="targetIndex: 13"><a-plane src="#p14" height="1" width="0.75" position="0 0.35 0" rotation="-15 0 0"></a-plane></a-entity>
+    <!-- Repite exactamente igual hasta targetIndex 13 -->
 
-</a-scene>
+  </a-scene>
+
+  <div id="hint">
+    
+  </div>
 </body>
 </html>
