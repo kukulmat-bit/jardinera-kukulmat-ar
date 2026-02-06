@@ -27,10 +27,7 @@ device-orientation-permission-ui="enabled:false">
 <img id="p08" src="p08.png">
 <img id="p09" src="p09.png">
 <img id="p10" src="p10.png">
-<img id="p11" src="p11.png">
-<img id="p12" src="p12.png">
-<img id="p13" src="p13.png">
-<img id="p14" src="p14.png">
+
 </a-assets>
 
 <a-camera look-controls="enabled:false"></a-camera>
