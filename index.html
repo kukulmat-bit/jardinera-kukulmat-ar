@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +10,18 @@
 
   <style>
     body { margin: 0; font-family: system-ui, sans-serif; }
-    #hint{
-      position: fixed; left: 12px; right: 12px; bottom: 12px;
-      background: rgba(0,0,0,.65); color:#fff; padding:10px 12px;
-      border-radius: 12px; font-size: 14px; z-index: 9999; text-align:center;
+    #hint {
+      position: fixed;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      background: rgba(0,0,0,.65);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      text-align: center;
+      z-index: 9999;
     }
   </style>
 </head>
@@ -21,10 +29,11 @@
 <body>
   <a-scene
     mindar-image="imageTargetSrc: targets.mind; autoStart: true;"
-    vr-mode-ui="enabled:false"
-    device-orientation-permission-ui="enabled:false"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
     renderer="colorManagement: true"
   >
+
     <a-assets>
       <img id="p01" src="p01.png">
       <img id="p02" src="p02.png">
@@ -44,23 +53,28 @@
 
     <a-camera position="0 0 0" look-controls="enabled:false"></a-camera>
 
-    <a-entity mindar-image-target="targetIndex: 0"><a-plane src="#p01" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 1"><a-plane src="#p02" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 2"><a-plane src="#p03" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 3"><a-plane src="#p04" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 4"><a-plane src="#p05" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 5"><a-plane src="#p06" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 6"><a-plane src="#p07" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 7"><a-plane src="#p08" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 8"><a-plane src="#p09" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 9"><a-plane src="#p10" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 10"><a-plane src="#p11" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 11"><a-plane src="#p12" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 12"><a-plane src="#p13" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
-    <a-entity mindar-image-target="targetIndex: 13"><a-plane src="#p14" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true" animation_smoothPos="property: position; dur: 500; easing: easeOutQuad" animation_smoothRot="property: rotation; dur: 500; easing: easeOutQuad"></a-plane></a-entity>
+    <a-entity mindar-image-system></a-entity>
+
+    <!-- Targets -->
+    <a-entity mindar-image-target="targetIndex: 0"><a-plane src="#p01" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 1"><a-plane src="#p02" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 2"><a-plane src="#p03" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 3"><a-plane src="#p04" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 4"><a-plane src="#p05" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 5"><a-plane src="#p06" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 6"><a-plane src="#p07" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 7"><a-plane src="#p08" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 8"><a-plane src="#p09" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 9"><a-plane src="#p10" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 10"><a-plane src="#p11" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 11"><a-plane src="#p12" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 12"><a-plane src="#p13" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
+    <a-entity mindar-image-target="targetIndex: 13"><a-plane src="#p14" height="1.25" width="0.95" position="0 0.55 0.35" rotation="-20 0 0" material="shader: flat; transparent: true"></a-plane></a-entity>
 
   </a-scene>
 
-  <div id="hint"></div>
+  <div id="hint">
+    Apunta la cámara a un glifo maya 🌿
+  </div>
 </body>
 </html>
